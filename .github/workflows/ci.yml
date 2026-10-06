@@ -19,7 +19,7 @@ concurrency:
 jobs:
   build-test-coverage:
     name: Restore, build, test and coverage
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.RUNNER_OS || 'ubuntu-26.04' }}
 
     steps:
       - name: Checkout
